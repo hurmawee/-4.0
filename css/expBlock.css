@@ -1,0 +1,118 @@
+.exp{
+    position: relative;
+}
+.expBox input
+{
+    position: relative;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #a4a4de;
+    outline: none;
+    color: #a4a4de;
+
+    transition: 0.5s;
+    margin: 10px 0;
+}
+.expBox span{
+    position: absolute;
+    left: 0;
+    font: 1em "JetBrains Mono";
+    text-transform: uppercase;
+
+    padding: 20px 20px 0 0;
+    pointer-events: none;
+    color: rgba(164, 164, 222, 0.5);
+    transition-duration: 0.5s;
+}
+input[type="month"]{
+    color: white;
+    background: url("../img/calendar_purple.png") no-repeat;
+    background-size: 20%;
+    background-position: 95%;
+}
+input[type="month"]::-webkit-calendar-picker-indicator{/*удалении иконки календаря*/
+    opacity: 0;
+}
+input[type="month"]:valid,
+input[type="month"]:focus{
+    color: #a4a4de;
+}
+
+.expBox{
+    padding-left: 10px;
+}
+.edu{
+    width: 15%;
+    font: 1.2em "JetBrains Mono";
+    transform: translateY(-20px);
+}
+.start{
+    transform: translate(260px,-20px);
+}
+.end{
+    transform: translate(-204px,30px);
+}
+.uni{
+    font: 1em "JetBrains Mono";
+    width: 35%;
+    transform: translate(-290px, 30px);
+    margin-top: 2px;
+}
+.edu + span{
+    transform: translate(20px,-19px);
+    font: 1.2em "JetBrains Mono";
+}
+.start + span{
+    transform: translate(411px,-20px);
+}
+.end + span{
+    transform: translate(411px, 30px);
+}
+.uni + span{
+    transform: translate(20px,30px);
+}
+.expBox input:valid + span,
+.expBox input:focus + span {
+    opacity: 0;
+}
+.expBox textarea{
+    position: relative;
+    padding: 10px;
+    width: 95%;
+    resize: none;
+    border: 1px solid #a4a4de;
+
+    border-radius: 5px;
+    outline: none;
+
+    color: #a4a4de;
+    font: 1em "JetBrains Mono";
+    transition: 0.5s;
+    margin: 10px 0;
+}
+.expBox textarea + span{
+    position: absolute;
+    left: 0;
+    font: 1em "JetBrains Mono";
+    text-transform: uppercase;
+    transform: translateX(20px);
+    padding: 20px 20px 0 0;
+    pointer-events: none;
+    color: rgba(164, 164, 222, 0.5);
+    transition-duration: 0.5s;
+}
+.expBox textarea:valid + span,
+.expBox textarea:focus + span{
+    color: #4747ea;
+    transform: translateX(20px);
+    font-size: 0.85em;
+    padding: 0 10px;
+    background-color: white;
+    border-left: 1px solid #4747ea;
+    border-right: 1px solid #4747ea;
+    letter-spacing: 0.2em;
+}
+.expBox textarea:valid,
+.expBox textarea:focus{
+    border: 1px solid #4747ea;
+}

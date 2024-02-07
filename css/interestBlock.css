@@ -1,0 +1,27 @@
+
+.interestBox{
+    display: flex;
+    margin: 5px 0;
+}
+.interestBox input{
+    width: 90%;
+    padding: 10px;
+    color:white;
+    font: 1em "JetBrains Mono";
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    background: #a4a4de;
+    transition: 0.5s;
+}
+.interestBox input:valid,
+.interestBox input:focus{
+    border-bottom: 1px solid #4747ea;
+}
+.interestBox input::placeholder{
+    color: rgba(255,255,255,0.5);
+}
+.interestBox input:valid::placeholder,
+.interestBox input:focus::placeholder{
+    color: #a4a4de;
+}

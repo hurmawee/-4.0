@@ -1,0 +1,25 @@
+.contactBox input:invalid:focus + span{
+    color: red;
+    transform: translateX(10px) translateY(-3px);
+    font-size: 0.85em;
+    padding: 0 10px;
+    background-color: #a4a4de;
+    border-left: 1px solid #4747ea;
+    border-right: 1px solid #4747ea;
+    letter-spacing: 0.2em;
+}
+.contactBox input:invalid:not([type="date"]):not(:placeholder-shown){
+    border: 1px solid #4747ea;
+}
+
+.contactBox input:not([type="date"]):invalid:not(:placeholder-shown) + span{
+    color: red;
+    transform: translateX(10px) translateY(-3px);
+    font-size: 0.85em;
+    padding: 0 10px;
+    background-color: #a4a4de;
+    border-left: 1px solid #4747ea;
+    border-right: 1px solid #4747ea;
+    letter-spacing: 0.2em;
+}
+

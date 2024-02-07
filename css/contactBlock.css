@@ -1,0 +1,55 @@
+
+.contactBox input{/*блок ввода*/
+    width: 100%;
+    padding: 10px;
+    border: 1px solid white;
+    background-color: #a4a4de;
+    border-radius: 5px;
+    outline: none;
+
+    color: white;
+    font: 1em "JetBrains Mono";
+    transition: 0.5s;
+    margin: 10px 0;
+}
+.contactBox span{/*подпись к блоку ввода*/
+    position: absolute;
+    left: 0;
+    font: 1em "JetBrains Mono";
+    text-transform: uppercase;
+    padding: 20px 20px;
+    pointer-events: none;
+    color: rgba(255,255,255,0.5);
+    transition-duration: 0.5s;
+}
+/*анимации к блоку ввода*/
+.contactBox input:valid + span,
+.contactBox input:focus + span{
+    color: #4747ea;
+    transform: translateX(10px) translateY(-3px);
+    font-size: 0.85em;
+    padding: 0 10px;
+    background-color: #a4a4de;
+    border-left: 1px solid #4747ea;
+    border-right: 1px solid #4747ea;
+    letter-spacing: 0.2em;
+}
+
+input[type="date"]{
+    color: #a4a4de;
+    background: url("../img/calendar_white.png") no-repeat;
+    background-size: 10%;
+    background-position: 97%;
+}
+input[type="date"]::-webkit-calendar-picker-indicator{/*удалении иконки календаря*/
+    opacity: 0;
+}
+input[type="date"]:valid,
+input[type="date"]:focus{
+    color: white;
+}
+
+.contactBox input:valid,
+.contactBox input:focus{
+    border: 1px solid #4747ea;
+}

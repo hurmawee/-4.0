@@ -1,0 +1,21 @@
+.img{
+    width: 200px;
+    object-fit: cover;
+    display: block;
+}
+.photo{
+    cursor: pointer;
+    display: block;
+    opacity: 0;
+    width: 200px;
+    height: 259px;
+    margin: 15px auto;
+    z-index: 99;
+}
+label{
+    left: 40px;
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 259px;
+}

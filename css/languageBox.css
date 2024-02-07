@@ -1,0 +1,40 @@
+.languageBox input{
+
+    width: 100%;
+    padding: 10px;
+    border: 1px solid white;
+    background-color: #a4a4de;
+    border-radius: 5px;
+    outline: none;
+
+    color: white;
+    font: 1em "JetBrains Mono";
+    transition: 0.5s;
+    margin: 10px 0;
+
+}
+.languageBox span{/*подпись к блоку ввода*/
+    position: absolute;
+    left: 0;
+    font: 1em "JetBrains Mono";
+    text-transform: uppercase;
+    padding: 20px 20px;
+    pointer-events: none;
+    color: rgba(255,255,255,0.5);
+    transition-duration: 0.5s;
+}
+.languageBox input:valid + span,
+.languageBox input:focus + span{
+    color: #4747ea;
+    transform: translateX(10px) translateY(-3px);
+    font-size: 0.85em;
+    padding: 0 10px;
+    background-color: #a4a4de;
+    border-left: 1px solid #4747ea;
+    border-right: 1px solid #4747ea;
+    letter-spacing: 0.2em;
+}
+.languageBox input:valid,
+.languageBox input:focus{
+    border: 1px solid #4747ea;
+}

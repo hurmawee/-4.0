@@ -1,0 +1,85 @@
+.add:active{
+    transform: translate(50%,20%);
+}
+
+.del{
+    width: 30px;
+    height: 30px;
+    background: url("../img/del.png") no-repeat;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.expBox .del{
+    background: url("../img/del_purple.png") no-repeat;
+    transform: translate(150px,-65px);
+}
+.expBox .del:active{
+    transform: translate(150px, -55px);
+}
+.headP{
+    display: flex;
+}
+.add{
+    display: block;
+    width: 30px;
+    height: 30px;
+    transform: translateX(50%);
+    background: url("../img/add.png") no-repeat;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.del:active{
+    transform: translate(0,20%);
+}
+.btnDel input{
+    width: 85%;
+}
+.btnDel{
+    display: flex;
+}
+.btnDel > .del{
+    transform: translate(30%, 50%);
+}
+.btnDel > .del:active{
+    transform: translate(30%, 70%);
+}
+
+.add_purple{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    transform: translate(50%,10%);
+    background: url("../img/add_purple.png") no-repeat;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.add_purple:active{
+    transform: translate(50%,20%);
+}
+.btnBox{
+    display: flex;
+}
+.btn{
+    margin-right: 15px;
+    width: 110px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #a4a4de;
+
+    transition: 0.2s;
+}
+.btn > span{
+    color: white;
+    font: 1em "JetBrains Mono";
+}
+.btn + .btn + .btn{
+
+    width: 95px;
+}
+.btn:active{
+    background-color: #4747ea;
+
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/interestBlock.css">
+    <link rel="stylesheet" href="css/languageBox.css">
+    <link rel="stylesheet" href="css/expBlock.css">
+    <link rel="stylesheet" href="css/contactBlock.css">
+    <link rel="stylesheet" href="css/btnBlocks.css">
+    <link rel="stylesheet" href="css/dragdrop.css">
+    <link rel="stylesheet" href="css/regex.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="briefInfo">
+            <label for="photo"><img src="img/profile.png" class="img"></label>
+            <input type="file" class="photo" id="photo" accept="image/jpeg, image/png image/jpg">
+
+            <p class="textBig">Личные данные</p>
+            <div class="contactBox">
+                <input type="text" required="required" id="FIO1" pattern="^[А-Я][а-я]{1,}\s[А-Я][а-я]{1,}(\s[А-Я][а-я]{1,})?$" placeholder=" ">
+                <span>ФИО</span>
+            </div>
+            <div class="contactBox">
+                <input type="text"  required="required" placeholder=" ">
+                <span>Адрес</span>
+            </div>
+            <div class="contactBox">
+                <input type="text"  required="required" pattern="^(\+7|8)?\s?\(?[1-9]{3}\)?\s?[0-9]{3}(\s|-)?[0-9]{2}(\s|-)?[0-9]{2}$" placeholder=" ">
+                <span>Номер телефона</span>
+            </div>
+            <div class="contactBox">
+                <input type="text"  required="required" pattern="^[a-zA-Z._'0-9\-]{1,}@[a-z]{1,}\.[a-z]{1,}$" placeholder=" ">
+                <span>Email</span>
+            </div>
+            <div class="contactBox">
+                <input type="date"  required="required" max="2006-01-01">
+                <span>Дата рождения</span>
+            </div>
+            <div>
+                <div class="headP"><p class="textBig">Интересы</p><div class="add interest"></div></div>
+                <div class="interestBox">
+                    <input type="text" placeholder="мой интерес" required="required">
+                    <div class="del"></div>
+                </div>
+                <div class="interestBox">
+                    <input type="text" placeholder="мой интерес" required="required">
+                    <div class="del"></div>
+                </div>
+            </div>
+            <div class="headP"><p class="textBig">Языки</p><div class="add language"></div></div>
+            <div class="languageBox">
+                <input type="text"  required="required">
+                <span>Родной язык</span>
+            </div>
+            <div class="languageBox btnDel">
+                <input type="text"  required="required">
+                <span>Иностранный язык</span>
+                <div class="del"></div>
+            </div>
+        </div>
+        <div class="detailedInfo">
+            <p id="FIO2">Тут будет ваше имя</p>
+            <div class="textareaBox">
+                <textarea required="required"></textarea>
+                <span>О себе</span>
+            </div>
+            <div class="exp">
+                <div class="headP"><p>Образование</p><div class="add_purple education"></div></div>
+                <div class="expBox">
+                    <input type="text" class="edu" required="required"><span>Профессия</span>
+                    <input type="month" class="start" required="required"><span>Начало</span>
+                    <input type="text" class="uni" required="required"><span>Университет</span>
+                    <input type="month" class="end" required="required"><span>Конец</span>
+                    <div class="del"></div>
+                </div>
+
+            </div>
+            <div class="exp">
+                <div class="headP"><p>Опыт работы</p><div class="add_purple experience"></div></div>
+                <div class="expBox">
+                    <input type="text" class="edu" required="required"><span>Должность</span>
+                    <input type="month" class="start" required="required"><span>Начало</span>
+                    <input type="text" class="uni" required="required"><span>Место работы</span>
+                    <input type="month" class="end" required="required"><span>Конец</span>
+                    <div class="del"></div>
+                    <textarea required="required"></textarea><span>Задачи</span>
+                </div>
+                <div class="expBox">
+                    <input type="text" class="edu" required="required"><span>Должность</span>
+                    <input type="month" class="start" required="required"><span>Начало</span>
+                    <input type="text" class="uni" required="required"><span>Место работы</span>
+                    <input type="month" class="end" required="required"><span>Конец</span>
+                    <div class="del"></div>
+                    <textarea required="required"></textarea><span>Задачи</span>
+                </div>
+            </div>
+            <div class="btnBox">
+                <div class="btn Save" onclick="clickSave()">
+                    <span>Сохранить</span>
+                </div>
+                <div class="btn Load" onclick="clickLoad()">
+                    <span>Загрузить</span>
+                </div>
+                <div class="btn Clean" onclick="clickClear()">
+                    <span>Очистить</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/addImage.js"></script>
+    <script src="js/name.js"></script>
+    <script src="js/SaveLoad.js"></script>
+    <script src="js/AddDel.js"></script>
+</body>
+</html>
